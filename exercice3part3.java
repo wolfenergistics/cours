@@ -61,18 +61,43 @@ class calculatricepart3{
           }
         }
       }*/
-    switch (rsop {
-      case 
+    switch (rsop) {
+      case plus :
+        res = valun + valdeux;
+        System.out.print("l'addition de "+ valun + " et " + valdeux + " est : " + res);
+        break;
+      case moins :
+        res = valun - valdeux;
+        System.out.print("la soustraction de "+ valun + " et " + valdeux + " est : " + res);
+        break;
+      case mult :
+        res = valun * valdeux;
+        System.out.print("la multiplication de "+ valun + " et " + valdeux + " est : " + res);
+        break;
+      case '/' :
+        if (valdeux == 0){
+          System.out.print("division  par zero");
+         
+        }
+        else{
+          res = valun / valdeux;
+           System.out.print("la division de "+ valun + " et " + valdeux + " est : " + res);
+        }
+        break;
+        
+      
+      
     }
     
     
     
     
-   
-   
-   
-   
     
+   
+   
+   
+   
+   
     
   }
  }
