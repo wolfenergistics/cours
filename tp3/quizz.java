@@ -5,21 +5,21 @@ class quizz {
         final Scanner clavier = new Scanner(System.in);
         int i = 1;
         final int  inconnu;
-        int reponse =0;
-        int recherche =0;
+        int reponse = 0;
+        int recherche = 0;
         int borne1;
         int borne2;
         int nbressaie;
 
         
-        System.out.println("le but du jeu est de trouver une valeurs entre 1 et 1024");
+        //System.out.println("le but du jeu est de trouver une valeurs entre 1 et 1024");
         System.out.println("a chaque fois il y aura une indication");
         System.out.println("entrer la première borne de l'intervalle:");
         borne1 = clavier.nextInt();
         System.out.println("entrer la deuxième borne de l'intervalle:");
         borne2 = clavier.nextInt();
         inconnu =  (int)(Math.random()*(borne2-borne1)+borne1);
-        System.out.println(inconnu);
+    
         nbressaie = (int)(Math.log(borne2)/Math.log(2));
         
         
@@ -34,12 +34,13 @@ class quizz {
                     System.out.println("trop petit");
                     recherche = reponse;
                 }
+                else if((reponse > inconnu)&&(reponse<recherche)){
+                    System.out.println("trop grand");
+                    recherche = reponse;
+                }
                 else if((reponse > inconnu)&&(reponse>=recherche)){
                     System.out.println("trop grand deja dit");
-                }
-                else if((reponse > inconnu)&&(reponse<recherche)){
-                    System.out.println("trop petit");
-                    recherche = reponse;
+                    
                 }
                 
                 i++;
@@ -47,6 +48,7 @@ class quizz {
 
                 if(nbressaie == 0){
                     System.out.println("vous avez utilisee tous vous essaies");
+                    System.out.println("le nombre etait : "+inconnu);
                     System.out.println("fin de partie");
                     System.exit(0);
                 }
