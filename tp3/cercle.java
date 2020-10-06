@@ -3,7 +3,7 @@ import java.util.Scanner;
 class cercle {
     public static void main(String[] arg) {
         final Scanner clavier = new Scanner(System.in);
-        double r;double p;double perim
+        double r;double p;
         final double PI = Math.PI;
 
          System.out.println("entrer le rayon du cercle");
