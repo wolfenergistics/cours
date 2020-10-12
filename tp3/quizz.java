@@ -34,11 +34,11 @@ class quizz {
                     System.out.println("trop petit");
                     recherche = reponse;
                 }
-                else if((reponse > inconnu)&&(reponse<recherche)){
+                else if((reponse > recherche)&&(reponse > inconnu)){
                     System.out.println("trop grand");
                     recherche = reponse;
                 }
-                else if((reponse > inconnu)&&(reponse>=recherche)){
+                else if((reponse >=recherche)&&(reponse> inconnu)){
                     System.out.println("trop grand deja dit");
                     
                 }

@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-class mastermind {
+class mastermindtableau {
     public static void main(String[] arg) {
         final Scanner clavier = new Scanner(System.in);
         int i;
-        int test1p1 = 0; int nbr1p1 = X;
-        int test2p1 = 0; int nbr2p1 = X;
-        int test3p1 = 0; int nbr3p1 = X;
-        int test4p1 = 0; int nbr4p1 = X;
-        int test1p2 = 0; int nbr1p2 = X;
-        int test2p2 = 0; int nbr2p2 = X;
-        int test3p2 = 0; int nbr3p2 = X;
-        int test4p2 = 0; int nbr4p2 = X;
+        int test1p1 = 0; int nbr1p1 = 'X';
+        int test2p1 = 0; int nbr2p1 = 'X';
+        int test3p1 = 0; int nbr3p1 = 'X';
+        int test4p1 = 0; int nbr4p1 = 'X';
+        int test1p2 = 0; int nbr1p2 = 'X';
+        int test2p2 = 0; int nbr2p2 = 'X';
+        int test3p2 = 0; int nbr3p2 = 'X';
+        int test4p2 = 0; int nbr4p2 = 'X';
         final int val1p1 = (int) (Math.random() * 10);
         final int val2p1 = (int) (Math.random() * 10);
         final int val3p1 = (int) (Math.random() * 10);
@@ -114,7 +114,7 @@ class mastermind {
                     if (test4p1 == val4p1) {
                         System.out.println("est bien place");
                         player1 = player1 + 1;
-                        nbr4p1 =  'val4p1';
+                        nbr4p1 =  val4p1;
                     } else if (test4p1 == val2p1) {
                         System.out.println("est bon mais mal place");
                     } else if (test4p1 == val3p1) {
