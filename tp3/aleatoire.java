@@ -3,8 +3,9 @@ import java.util.Scanner;
 class alea4 {
     public static void main(String[] arg) {
         final Scanner clavier = new Scanner(System.in);
-        double yolo;int entre;int i;double min;double max;double[] tab;
-
+        double yolo,min,max;//int entre;int i;double min;double max;
+        double[] tab;
+        int entre,i;
      System.out.println("entrer une valeur");
      entre = clavier.nextInt();
      tab = new double[entre];
