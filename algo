@@ -1,0 +1,40 @@
+exercice 3
+
+ procédure affDiv(x : entier)
+
+ hypothèse x est superieur a zero
+
+ déclarations
+  variables locales
+   
+   div,i :entier
+ début
+   pour i allant de 1 a x faire
+   
+    si (x/i == 0) alors
+     ecrire(i + " ")
+    finsi
+   finpour
+ fin
+
+ fonction nbDiv(x : entier) : entier
+
+ hypothèse x est superieur a zero
+
+ déclarations
+  variables locales
+   resultat,i : entier
+  
+ début
+  
+ pour i allant de 1 a x faire
+
+  si (x/i ==0) alors
+   resultat <- resultat +1
+  finsi
+ finpour  
+
+ retourner resultat
+ fin
+
+

@@ -1,29 +1,30 @@
 import java.util.Scanner;
 
-import javax.xml.crypto.dsig.SignatureProperties;
+
 
 public class facturation {
     private static Scanner clavier = new Scanner(System.in);
     public static void main(String[] arg){
-     int[] siropera = new int[4]; int siropbleu;  double fdt;String facture;
+     int[] siropera = new int[4]; int siropbleu;  double fdt;String facture = "oui";
      
      
-     System.out.println("voulez-vous saisir une facture?");
-     System.out.println("oui/non");
-     facture = clavier.nextLine();
      
-        while(facture.equals("oui")){
-      
-            siropera = saisirNbSiropErable();
-            siropbleu = saisirNbSiropBleuets();
-            fdt = calculerFraisTransport(siropera, siropbleu);
-            afficherFacture(siropera, siropbleu); 
-            System.out.println();
+        
+        do {   
             System.out.println("voulez-vous saisir une facture?");
             System.out.println("oui/non");
-            facture = clavier.nextLine();
+            facture = clavier.next();
+            
+            if(facture.equals("oui")){
+            siropera = saisirNbSiropErable();
+            siropbleu = saisirNbSiropBleuets();
+            
+            afficherFacture(siropera, siropbleu); 
+            System.out.println();
+            }
+            
         
-        }
+        } while (facture.equals("oui"));
      
         
      System.out.println("bonne fin de journee");

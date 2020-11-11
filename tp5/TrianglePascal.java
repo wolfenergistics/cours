@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
+
+
 public class TrianglePascal {
     private static Scanner clavier = new Scanner(System.in);
     
     public static void main(String[] arg){
         
-        int n;
+        long n;long digit;
         System.out.println("entrer n : ");
-        n = clavier.nextInt();
+        n = clavier.nextLong();
         
-
-  
-
-      
+       
+        //afficherLigne(n);
         
-        afficherTriangle(n);
+        AfficherTriangle(n);
     }
     
 
@@ -26,21 +26,18 @@ public class TrianglePascal {
 
 
 
-    public static int factorielle(int x){
-        int tempo;
+    public static long factorielle(long x){
+        long tempo =1;
         
-        tempo = 1;
-        
-       
-        for(int i=1;i<=x;i++){
+        for(long i=1;i<=x;i++){
         tempo = tempo * i;
         }
         
         return tempo;
     }
 
-    public static int coeffBinomial(int n,int p){
-       int binom;int facton;int factodiv;int nmp = n-p;int factonmp;
+    public static long coeffBinomial(long n,long p){
+       long binom,facton, factodiv, nmp = n-p, factonmp;
 
         facton = factorielle(n);
         factonmp = factorielle(nmp);
@@ -50,20 +47,74 @@ public class TrianglePascal {
         return binom;
 
     }
-    public static int afficherLigne(int n){
-        int ligne = 0;
-        for (int i=0;i<=n;i++){
-            ligne = coeffBinomial(n,i);
-         System.out.print(ligne + " ");  
-        }
-        return ligne;
+    public static void afficherLigne(long n,long coef){
+    
+        for (long i=0;i<n;i++){
+           
+         afficherValeur(coef);
+         
+        } 
+        
     }
-    public static int afficherTriangle(int n){
-        int triangle = 0;
-        for(int i=0;i<=n;i++){
-            triangle = afficherLigne(i);
-            System.out.println(triangle+" ");
+    public static void AfficherTriangle(long n){
+        long digits ;
+        for(long i=0;i<n;i++){
+            
+           
+                
+             afficherLigne(n,coeffBinomial(n, i));
+            
+            
+
+            
+            System.out.print("\n");
         }
-        return triangle;
+        
+    }
+    public static long nbreDigit(long n){
+        long nbrdigit =0;long div;
+         div = n;
+        while(div!=0){
+            div = div/10;
+            nbrdigit+=1;
+        }
+        return nbrdigit;
+
+    }
+
+    public static long coeffMaximum(long n){
+        long coeffmax =0 ;long temp=0;
+
+        for(long i =0;i<n;i++){
+
+            temp = coeffBinomial(n,i);
+
+            if(temp>coeffmax){
+                coeffmax = temp;
+            }
+               
+        }
+
+        return coeffmax;
+
+    }
+    public static void afficherEspace(long n){
+        
+        for(long i=0;i<n;i++){
+            System.out.print(" ");
+        }
+    }
+    public static void afficherValeur(long n){
+        
+        
+        
+        for(int i=0;i<n;i++){
+        afficherEspace(nbreDigit(n));
+        System.out.print(n);
+        }
+         
+         
+        
+        
     }
 }
