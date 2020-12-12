@@ -1,0 +1,64 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Binaires",
+            "request": "launch",
+            "mainClass": "Binaires",
+            "projectName": "cours_fbd89557"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - amadrone",
+            "request": "launch",
+            "mainClass": "amadrone",
+            "projectName": "cours_fbd89557"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Image",
+            "request": "launch",
+            "mainClass": "Image",
+            "projectName": "cours_fbd89557"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - IsoContest",
+            "request": "launch",
+            "mainClass": "IsoContest",
+            "projectName": "cours_fbd89557"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pendu",
+            "request": "launch",
+            "mainClass": "pendu",
+            "projectName": "cours_fbd89557"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - recherchetableau1",
+            "request": "launch",
+            "mainClass": "recherchetableau1",
+            "projectName": "cours_fbd89557"
+        },
+        {},
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        }
+    ]
+}
