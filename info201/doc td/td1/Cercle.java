@@ -2,6 +2,7 @@ class Cercle {
     private double rayon;
     private double a;
     private double b;
+    private double[] centre  = {0,0};
 
     //constructeur par défaut
 
@@ -19,6 +20,8 @@ class Cercle {
         this.a = a;
         this.b = b;
         
+        centre[0] = a;centre[1] = b;
+        
     }
 
     //getters
@@ -32,6 +35,9 @@ class Cercle {
     public double getB(){
         return b;
     }
+    public double getCentre(int c){
+        return centre[c];
+    }
 
     //setters
 
@@ -43,17 +49,19 @@ class Cercle {
     public void setA(double a){
         if(a>=0){
             this.a = a;
+            centre[0] = a;
         }
     }
     public void setB(double b){
         if(b>=0){
             this.b = b;
+            centre[1]= b;
         }
     }
 
     //toString
 
     public String toString(){
-        return "le cercle est de rayon : "+rayon+" et de coordonées ["+a+";"+b+"].";
+        return "le cercle est de rayon : "+rayon+" et de coordonees ["+a+";"+b+"] et de centre :"+centre[0]+","+centre[1]+".";
     }
 }
